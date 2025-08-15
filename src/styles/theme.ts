@@ -13,16 +13,16 @@ export const theme = {
     textLight: '#ffffff',
     textDark: '#161616',
 
-    gray100: '#ededed',
+    gray100: '#ffffffff',
     gray200: '#e0e3e4',
     gray300: '#d4d4d4ff',
   },
   spacing: {
-    xs: '4px',
-    sm: '8px',
-    md: '16px',
-    lg: '24px',
-    xl: '32px',
+    xs: '5px',
+    sm: '10px',
+    md: '30px',
+    lg: '50px',
+    xl: '150px',
   },
   fontSizes: {
     titleSmall: "clamp(12px, 2vw, 2em)",

@@ -6,9 +6,10 @@ export const Swrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 70%;
     height: fit fit-content;
-    padding: ${({theme}) => theme.spacing.xl};
-    gap: ${({theme}) => theme.spacing.md};
+    padding: ${({theme}) => theme.spacing.md};
+    gap: ${({theme}) => theme.spacing.sm};
     background-color: ${({theme}) => theme.colors.primary};
 
     h1{

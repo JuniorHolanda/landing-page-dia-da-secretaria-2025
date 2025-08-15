@@ -1,17 +1,71 @@
 'use client'
-import styled from "styled-components";
+import styled, { css }  from "styled-components";
+import { fadeIn, fadeOut } from "@/styles/animation";
+
+interface ImgProps {
+  isHovered: boolean;
+}
 
 
 export const Scard = styled.article`
+    position: relative;
     display: flex;
-    width: 400px;
-    height: 600px;
-    background-color: red;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: ${({theme}) => theme.colors.gray100 };
+    border-radius:   ${({theme}) => theme.spacing.md};
+    overflow: hidden;
+    `;
+
+export const Slist = styled.ul`
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    `;
+
+export const ScontainerImg = styled.div<ImgProps>`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+
+  img {
+    opacity: 0;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    animation: ${(props: ImgProps) =>
+      props.isHovered
+        ? css`${fadeIn} 0.7s ease-in-out forwards`
+        : css`${fadeOut} 0.7s ease-in-out forwards`};
+  }
 `;
 
+export const Scontent = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:  ${({theme}) => theme.spacing.sm};
+    padding: ${({theme}) => theme.spacing.sm};
+    align-items: center;
+    width: 100%;
+    background-color:  ${({theme}) => theme.colors.primaryLight};
+`;
 export const Sbutton = styled.button`
     display: flex;
-    padding: ${({theme}) => theme.spacing.md};
+    justify-content: center;
+    align-items: center;
+    gap:  ${({theme}) => theme.spacing.sm};
+    padding: ${({theme}) => theme.spacing.sm};
+    border-radius:  ${({theme}) => theme.spacing.md};
+    width: fit-content;
     background-color: ${({theme}) => theme.colors.primary};
     color: ${({theme}) => theme.colors.gray100};
 `;
