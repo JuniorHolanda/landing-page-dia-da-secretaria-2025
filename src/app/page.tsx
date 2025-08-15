@@ -7,7 +7,7 @@ import { Product } from "@/utils/interface";
 export default async function Home() {
 
   const keywords = [
-    'Bolsa Graci',
+    'Pasta Ibm Note',
     'Bolsa Rss',
     'Bolsa Pst',
     'Bolsa Vita Clear',
@@ -32,8 +32,8 @@ export default async function Home() {
       />
       <section>
         {
-          filteredData.map((item) => (
-            <Card key={item._id} product={item} />
+          filteredData.map((item, index) => (
+            <Card key={`${item._id}-${index}`} product={item} />
           ))
         }
       </section>

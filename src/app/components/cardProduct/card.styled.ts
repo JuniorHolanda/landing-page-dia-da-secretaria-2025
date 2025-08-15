@@ -1,6 +1,7 @@
 'use client'
 import styled, { css }  from "styled-components";
 import { fadeIn, fadeOut } from "@/styles/animation";
+import Link from "next/link";
 
 interface ImgProps {
   isHovered: boolean;
@@ -58,7 +59,7 @@ export const Scontent = styled.div`
     width: 100%;
     background-color:  ${({theme}) => theme.colors.primaryLight};
 `;
-export const Sbutton = styled.button`
+export const Sbutton = styled(Link)`
     display: flex;
     justify-content: center;
     align-items: center;

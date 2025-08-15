@@ -1,4 +1,4 @@
-interface GalleryItem {
+export interface GalleryItem {
   _id: string;
   img: string;
   altImg: string;

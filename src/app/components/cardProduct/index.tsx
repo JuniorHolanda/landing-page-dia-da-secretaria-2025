@@ -3,6 +3,7 @@ import { JSX, useState } from "react";
 import { Sbutton, Scard, ScontainerImg, Scontent, Slist } from './card.styled'
 import { CardProps } from "@/utils/interface";
 import { LiaEyeSolid } from "react-icons/lia";
+import Link from "next/link";
 
 
 
@@ -40,7 +41,7 @@ export default function Card({ product }: CardProps): JSX.Element {
             <Scontent>
                 <h1>{product.title}</h1>
                 <p>{product.smallText}</p>
-                <Sbutton>
+                <Sbutton href={`/produtos/${product._id}`}>
                     <LiaEyeSolid />
                     Ver Produto
                 </Sbutton>
