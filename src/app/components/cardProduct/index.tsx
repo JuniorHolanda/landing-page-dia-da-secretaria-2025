@@ -3,9 +3,6 @@ import { JSX, useState } from "react";
 import { Sbutton, Scard, ScontainerImg, Scontent, Slist } from './card.styled'
 import { CardProps } from "@/utils/interface";
 import { LiaEyeSolid } from "react-icons/lia";
-import Link from "next/link";
-
-
 
 
 export default function Card({ product }: CardProps): JSX.Element {
@@ -22,7 +19,7 @@ export default function Card({ product }: CardProps): JSX.Element {
             </Slist>
 
             <ScontainerImg
-                isHovered={changeImg}
+                $isHovered={changeImg}
                 onMouseEnter={() => setChangeImg(!changeImg)}
                 onMouseLeave={() => setChangeImg(true)}>
                 {changeImg ? (

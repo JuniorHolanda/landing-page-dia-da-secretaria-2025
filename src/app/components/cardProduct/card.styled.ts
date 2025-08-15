@@ -4,7 +4,7 @@ import { fadeIn, fadeOut } from "@/styles/animation";
 import Link from "next/link";
 
 interface ImgProps {
-  isHovered: boolean;
+  $isHovered: boolean;
 }
 
 
@@ -33,6 +33,7 @@ export const ScontainerImg = styled.div<ImgProps>`
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100%;
   cursor: pointer;
   overflow: hidden;
 
@@ -43,7 +44,7 @@ export const ScontainerImg = styled.div<ImgProps>`
     width: 100%;
     height: 100%;
     animation: ${(props: ImgProps) =>
-      props.isHovered
+      props.$isHovered
         ? css`${fadeIn} 0.7s ease-in-out forwards`
         : css`${fadeOut} 0.7s ease-in-out forwards`};
   }
@@ -57,7 +58,17 @@ export const Scontent = styled.div`
     padding: ${({theme}) => theme.spacing.sm};
     align-items: center;
     width: 100%;
+    height: auto;
+    min-height: 30%;
     background-color:  ${({theme}) => theme.colors.primaryLight};
+    h1, p{
+      color: ${({theme}) => theme.colors.textDark};
+      text-align: center;
+    }
+    p{
+      color: ${({theme}) => theme.colors.textLight};
+      text-align: center;
+    }
 `;
 export const Sbutton = styled(Link)`
     display: flex;

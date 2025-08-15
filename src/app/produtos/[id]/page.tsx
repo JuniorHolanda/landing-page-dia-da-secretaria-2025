@@ -8,12 +8,12 @@ import {
 import Header from "@/app/components/Header";
 import Gallery from "@/app/components/Gallery";
 
-interface ProductPageProps {
-  params: { id: string };
-}
-
-export default async function ProductPage({ params }: ProductPageProps) {
-  const { id } = params;
+export default async function ProductPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
 
   const res = await fetch(
     `https://back-end-catalogo-miriam-momesso.onrender.com/product/produto/${id}`

@@ -1,18 +1,22 @@
 // 'use client'
 import Card from "./components/cardProduct";
 import Header from "./components/Header";
-import { Shome } from "./page.styled";
+import { ScontainerImg, Shome, Slink } from "./page.styled";
 import { Product } from "@/utils/interface";
 
 export default async function Home() {
 
   const keywords = [
     'Pasta Ibm Note',
-    'Bolsa Rss',
-    'Bolsa Pst',
-    'Bolsa Vita Clear',
+    'Bag Mi',
+    'Térmica AE Tri',
+    'Mochila ADV',
+    'Pasta Sinc',
+    'Caixa de Som bluetooth',
+    'Térmica JL',
     'Necessaire CN',
-    'Necessaire EV'
+    'Kit Higiene Bucal'
+    
   ];
 
 
@@ -27,15 +31,22 @@ export default async function Home() {
   return (
     <Shome>
       <Header
-        title="Dia da Secretária"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis ipsam aliquam consequatur cumque voluptate quia incidunt explicabo ab est temporibus exercitationem minus nemo molestias! Quis, laudantium? Quas, facere quasi."
+        title="Dia dos Professores"
+        text="Nossas sugestões de brindes para celebrar o Dia dos Professores."
       />
       <section>
-        {
-          filteredData.map((item, index) => (
-            <Card key={`${item._id}-${index}`} product={item} />
-          ))
-        }
+        <ScontainerImg>
+          {
+            filteredData.map((item, index) => (
+              <Card key={`${item._id}-${index}`} product={item} />
+            ))
+          }
+        </ScontainerImg>
+
+          <Slink href={'http://catalogo.miriammomesso.com.br'}>
+            Acesse nosso Catálogo e veja mais brindes
+          </Slink>
+
       </section>
 
     </Shome>
