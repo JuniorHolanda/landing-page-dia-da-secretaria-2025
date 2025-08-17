@@ -5,7 +5,7 @@ import Link from "next/link";
 export const Sproduct = styled.section`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     width: 100%;
     height: 100vh;
@@ -17,7 +17,7 @@ export const Swrapper = styled.section`
     justify-content: center;
     align-items: center;
     width: 70%;
-    height:100%;
+    height: 80%;
     background-color: ${({theme}) => theme.colors.gray100};
     padding: ${({theme}) => theme.spacing.lg};
     gap: ${({theme}) => theme.spacing.md};
@@ -34,7 +34,6 @@ export const Slink = styled(Link)`
     background-color: ${({theme}) => theme.colors.primary};
     border-radius: ${({theme}) => theme.spacing.md} ;
     font-size:  ${({theme}) => theme.fontSizes.titleSmall};
-
 `
 
 export const Scontent = styled.div`
@@ -43,8 +42,7 @@ export const Scontent = styled.div`
     justify-content: center;
     gap:  ${({theme}) => theme.spacing.md};
     width: 50%;
-    height: 100%;
-    
+    height: auto;    
     
     h1{
         font-size:  ${({theme}) => theme.fontSizes.titleLarge};
@@ -56,7 +54,7 @@ export const Scontent = styled.div`
         font-size:  ${({theme}) => theme.fontSizes.text};
         color:  ${({theme}) => theme.colors.textDark};
     }
-
+    
     div{
         display: flex;
         gap:  ${({theme}) => theme.spacing.sm};
@@ -65,6 +63,7 @@ export const Scontent = styled.div`
             background-color:  ${({theme}) => theme.colors.textDark};
             padding: ${({theme}) => theme.spacing.sm};
             border-radius: ${({theme}) => theme.spacing.md};;
+            color:  ${({theme}) => theme.colors.textLight};
          }
     }
 `

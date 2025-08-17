@@ -1,7 +1,7 @@
 'use client'
 
 interface ActiveProps {
-    isActive?: boolean;
+    isactive?: boolean;
 }
 
 import { theme } from "@/styles/theme";
@@ -43,13 +43,14 @@ export const ScontainerSecondImg = styled.div<ActiveProps>`
     gap: ${({theme}) => theme.spacing.md};
 `
 
- export const SImgGallery = styled.div<ActiveProps>`
+ export const SimgGallery = styled.div<ActiveProps>`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    border: solid ${(props) => (props.isActive ? theme.colors.primary : theme.colors.gray200)};
+    height: 100%;
+    border: solid ${(props) => (props.isactive ? theme.colors.primary : theme.colors.gray200)};
     border-radius: ${({theme}) => theme.spacing.sm};
     cursor: pointer;
 
@@ -57,5 +58,6 @@ export const ScontainerSecondImg = styled.div<ActiveProps>`
             object-fit: cover;
             object-position: center;
             width: 100%;
+            height: 100%;
         }
 `

@@ -7,8 +7,8 @@ export const Swrapper = styled.div`
     align-items: center;
     justify-content: center;
     width: 70%;
-    height: fit fit-content;
-    padding: ${({theme}) => theme.spacing.md};
+    height: 20%;
+    padding: ${({theme}) => theme.spacing.sm};
     gap: ${({theme}) => theme.spacing.sm};
     background-color: ${({theme}) => theme.colors.primary};
 
