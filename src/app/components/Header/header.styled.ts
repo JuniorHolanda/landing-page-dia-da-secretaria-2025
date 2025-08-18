@@ -42,6 +42,14 @@ export const Swrapper = styled.div`
         font-size: ${({theme}) => theme.fontSizes.titleMedium};
         color: ${({theme}) => theme.colors.textLight};
         text-align: center;
+
+        @media (max-width: ${({theme}) => theme.breakpoints.desktop  }) {
+            font-size: ${({theme}) => theme.fontSizes.textBig};
+        }
+
+        @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
+            font-size: ${({theme}) => theme.fontSizes.textBig};
+        }
     }
 
     p{
