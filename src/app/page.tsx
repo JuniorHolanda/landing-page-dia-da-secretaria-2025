@@ -1,8 +1,12 @@
 // 'use client'
 import Card from "./components/cardProduct";
 import Header from "./components/Header";
+import Slider from "./components/Slider";
 import { ScontainerImg, Shome, Slink } from "./page.styled";
 import { Product } from "@/utils/interface";
+import sliderProduct from "@/app/data/slides.json"
+import { GoBook } from "react-icons/go";
+
 
 export default async function Home() {
 
@@ -16,7 +20,6 @@ export default async function Home() {
     'Térmica JL',
     'Necessaire CN',
     'Kit Higiene Bucal'
-    
   ];
 
 
@@ -35,6 +38,7 @@ export default async function Home() {
         text="Nossas sugestões de brindes para celebrar o Dia dos Professores."
       />
       <section>
+        <Slider slides={sliderProduct} />
         <ScontainerImg>
           {
             filteredData.map((item, index) => (
@@ -43,9 +47,10 @@ export default async function Home() {
           }
         </ScontainerImg>
 
-          <Slink href={'http://catalogo.miriammomesso.com.br'}>
-            Acesse nosso Catálogo e veja mais brindes
-          </Slink>
+        <Slink href={'http://catalogo.miriammomesso.com.br'}>
+          <GoBook />
+          Para ver mais, acesse nosso Catálogo
+        </Slink>
 
       </section>
 

@@ -34,7 +34,7 @@ export default function Gallery({ product }: GalleryProps) {
             <ScontainerSecondImg>
                 {product.gallery.map((item) => (
                     <SimgGallery
-                        isactive={changeImg === item.img}
+                        $isactive={changeImg === item.img}
                         onClick={() => change(item.img, item.altImg)}
                         key={item._id} >
                         <img src={item.img} alt={item.altImg} />

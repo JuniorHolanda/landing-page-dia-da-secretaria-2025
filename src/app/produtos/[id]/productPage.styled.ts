@@ -10,7 +10,11 @@ export const Sproduct = styled.section`
     width: 100%;
     height: 100vh;
     background-color: ${({theme}) => theme.colors.gray200};
-`
+
+    @media (max-width: ${({theme}) => theme.breakpoints.desktop}) {
+        height: auto;
+    }
+    `
 
 export const Swrapper = styled.section`
     display: flex;
@@ -21,19 +25,23 @@ export const Swrapper = styled.section`
     background-color: ${({theme}) => theme.colors.gray100};
     padding: ${({theme}) => theme.spacing.lg};
     gap: ${({theme}) => theme.spacing.md};
-`
+    
+    @media (max-width: ${({theme}) => theme.breakpoints.desktop}) {
+            width: 90%;
+            flex-direction: column;
+    }
 
-export const Slink = styled(Link)`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    gap:  ${({theme}) => theme.spacing.sm};
-    padding: ${({theme}) => theme.spacing.md};
-    background-color: ${({theme}) => theme.colors.primary};
-    border-radius: ${({theme}) => theme.spacing.md} ;
-    font-size:  ${({theme}) => theme.fontSizes.titleSmall};
+    @media (max-width: ${({theme}) => theme.breakpoints.tablet}) {
+        width: 90%;
+        padding: ${({theme}) => theme.spacing.md};
+
+    }
+
+    @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
+        width: 100%;
+        padding: ${({theme}) => theme.spacing.sm};
+
+    }
 `
 
 export const Scontent = styled.div`
@@ -42,17 +50,40 @@ export const Scontent = styled.div`
     justify-content: center;
     gap:  ${({theme}) => theme.spacing.md};
     width: 50%;
-    height: auto;    
+    height: auto;
+
+    @media (max-width: ${({theme}) => theme.breakpoints.desktop}) {
+        width: 80%;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    @media (max-width: ${({theme}) => theme.breakpoints.tablet}) {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    
     
     h1{
         font-size:  ${({theme}) => theme.fontSizes.titleLarge};
         color:  ${({theme}) => theme.colors.textDark};
+
+        @media (max-width: ${({theme}) => theme.breakpoints.desktop}) {
+            font-size:  ${({theme}) => theme.fontSizes.titleLarge};
+            font-weight: 800;
+            flex-direction: column;
+        }
     }
 
         
     p{
         font-size:  ${({theme}) => theme.fontSizes.text};
         color:  ${({theme}) => theme.colors.textDark};
+
+        @media (max-width: ${({theme}) => theme.breakpoints.desktop}) {
+            font-size:  ${({theme}) => theme.fontSizes.textMedium};
+        }
     }
     
     div{
@@ -66,4 +97,32 @@ export const Scontent = styled.div`
             color:  ${({theme}) => theme.colors.textLight};
          }
     }
+`
+
+export const Slink = styled(Link)`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    gap:  ${({theme}) => theme.spacing.sm};
+    padding: ${({theme}) => theme.spacing.sm} ${({theme}) => theme.spacing.md} ;
+    background-color: ${({theme}) => theme.colors.primary};
+    border-radius: ${({theme}) => theme.spacing.md} ;
+    font-size:  ${({theme}) => theme.fontSizes.textMedium};
+    font-weight: 800;
+    color:  ${({theme}) => theme.colors.textLight};
+
+    @media (max-width: ${({theme}) => theme.breakpoints.desktop}) {
+        font-size:  ${({theme}) => theme.fontSizes.textMedium};
+    }
+
+        @media (max-width: ${({theme}) => theme.breakpoints.tablet}) {
+        width: 50%;
+    }
+
+    @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
+        width: 100%;
+    }
+
 `

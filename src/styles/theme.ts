@@ -27,8 +27,15 @@ export const theme = {
   fontSizes: {
     titleSmall: "clamp(12px, 2vw, 2em)",
     titleMedium: "clamp(16px, 2.5vw, 3em)",
-    titleLarge: "clamp(20px, 3vw, 4em)",
+    titleLarge: "clamp(25px, 4vw, 5em)",
 
     text: "clamp(8px, 1vw, 2em)",
+    textMedium: "clamp(10px, 1.5vw, 2.5em)",
   },
+   breakpoints: {
+    mobile: "480px",
+    tablet: "768px",
+    desktop: "1024px",
+    tv: "1500px"
+  }
 };

@@ -1,7 +1,7 @@
 'use client'
 
 interface ActiveProps {
-    isactive?: boolean;
+    $isactive?: boolean;
 }
 
 import { theme } from "@/styles/theme";
@@ -13,6 +13,16 @@ export const Sgallery = styled.div`
     gap: ${({theme}) => theme.spacing.md};
     width: 50%;
     height: 100%;
+
+    @media (max-width: ${({theme}) => theme.breakpoints.desktop}) {
+        flex-direction: column;
+        gap: ${({theme}) => theme.spacing.sm};
+        width: 70%;
+    }
+
+    @media (max-width: ${({theme}) => theme.breakpoints.tablet}) {
+        width: 100%;
+    }
 `
 
 export const ScontainerImgMain = styled.div`
@@ -25,6 +35,10 @@ export const ScontainerImgMain = styled.div`
     overflow: hidden;
     border: solid ${({theme}) => theme.colors.primary};
     border-radius: ${({theme}) => theme.spacing.sm};
+
+    @media (max-width: ${({theme}) => theme.breakpoints.desktop}) {
+        width: 100%;
+    }
 
     img{
         object-fit: cover;
@@ -41,6 +55,14 @@ export const ScontainerSecondImg = styled.div<ActiveProps>`
     width: 20%;
     height: 100%;
     gap: ${({theme}) => theme.spacing.md};
+    
+    @media (max-width: ${({theme}) => theme.breakpoints.desktop}) {
+        flex-direction: row;
+        width: 100%;
+        height: 20%;
+        gap: ${({theme}) => theme.spacing.sm};
+
+    }
 `
 
  export const SimgGallery = styled.div<ActiveProps>`
@@ -50,7 +72,8 @@ export const ScontainerSecondImg = styled.div<ActiveProps>`
     align-items: center;
     overflow: hidden;
     height: 100%;
-    border: solid ${(props) => (props.isactive ? theme.colors.primary : theme.colors.gray200)};
+    width: 100%;
+    border: solid ${(props) => (props.$isactive ? theme.colors.primary : theme.colors.gray200)};
     border-radius: ${({theme}) => theme.spacing.sm};
     cursor: pointer;
 

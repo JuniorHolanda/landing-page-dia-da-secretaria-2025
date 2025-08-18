@@ -1,12 +1,8 @@
 import { Product } from "@/utils/interface";
-import {
-  Scontent,
-  Sproduct,
-  Swrapper,
-  Slink
-} from "./productPage.styled";
+import { Scontent, Sproduct, Swrapper, Slink } from "./productPage.styled";
 import Header from "@/app/components/Header";
 import Gallery from "@/app/components/Gallery";
+import Slider from "@/app/components/Slider";
 
 export default async function ProductPage({
   params,
@@ -25,7 +21,7 @@ export default async function ProductPage({
 
   return (
     <Sproduct>
-    <Header title="Produto" link={true} ></Header>
+      <Header title="Produto" link={true} ></Header>
       <Swrapper>
         <Gallery product={data} />
         <Scontent>

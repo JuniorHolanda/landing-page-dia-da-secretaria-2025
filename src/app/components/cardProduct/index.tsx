@@ -1,6 +1,6 @@
 'use client'
 import { JSX, useState } from "react";
-import { Sbutton, Scard, ScontainerImg, Scontent, Slist } from './card.styled';
+import { Sbutton, Scard, ScontainerImg, Scontent } from './card.styled';
 import { CardProps } from "@/utils/interface";
 import { LiaEyeSolid } from "react-icons/lia";
 
@@ -12,11 +12,6 @@ export default function Card({ product }: CardProps): JSX.Element {
 
     return (
         <Scard>
-            <Slist>
-                {product.category.map((item, index) => (
-                    <li key={`${item}-${index}`}>{item}</li>
-                ))}
-            </Slist>
 
             <ScontainerImg
                 $isHovered={changeImg}
