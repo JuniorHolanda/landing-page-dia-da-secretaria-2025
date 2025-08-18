@@ -61,6 +61,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
+        <head>
+          <title>Dia dos Professores</title>
+          <meta name="description" content="Confira nossas sugestões de brindes para o Dia dos Professores" />
+
+          {/* Favicon */}
+          <link rel="icon" href="/favicon.png" />
+
+          {/* Open Graph */}
+          <meta property="og:title" content="Dia dos Professores" />
+          <meta property="og:description" content="Confira nossas sugestões de brindes para o Dia dos Professores" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://seusite.com.br/dia-dos-professores" />
+          <meta property="og:image" content="https://res.cloudinary.com/dnr3wfqyy/image/upload/v1755523544/dia-dos-professores_irf8uq.jpg" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+
+          {/* Twitter Card */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Dia dos Professores" />
+          <meta name="twitter:description" content="Confira nossas sugestões de brindes para o Dia dos Professores" />
+          <meta name="twitter:image" content="https://res.cloudinary.com/dnr3wfqyy/image/upload/v1755523544/dia-dos-professores_irf8uq.jpg" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProviderWrapper>
           <GlobalStylesProvider />
