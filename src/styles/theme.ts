@@ -31,6 +31,7 @@ export const theme = {
 
     text: "clamp(8px, 1vw, 2em)",
     textMedium: "clamp(10px, 1.5vw, 2.5em)",
+    textBig: "clamp(16px, 2vw, 3em)",
   },
    breakpoints: {
     mobile: "480px",

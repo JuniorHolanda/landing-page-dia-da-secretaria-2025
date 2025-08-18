@@ -84,6 +84,10 @@ export const Scontent = styled.div`
         @media (max-width: ${({theme}) => theme.breakpoints.desktop}) {
             font-size:  ${({theme}) => theme.fontSizes.textMedium};
         }
+
+        @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
+            font-size:  ${({theme}) => theme.fontSizes.textBig};
+        }
     }
     
     div{
@@ -117,12 +121,14 @@ export const Slink = styled(Link)`
         font-size:  ${({theme}) => theme.fontSizes.textMedium};
     }
 
-        @media (max-width: ${({theme}) => theme.breakpoints.tablet}) {
+    @media (max-width: ${({theme}) => theme.breakpoints.tablet}) {
         width: 50%;
     }
 
     @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
         width: 100%;
+        font-size:  ${({theme}) => theme.fontSizes.textBig};
+
     }
 
 `
