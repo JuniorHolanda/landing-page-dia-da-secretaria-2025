@@ -14,7 +14,7 @@ export default async function Home() {
     'Pasta Ibm Note',
     'Bag Mi',
     'Térmica AE Tri',
-    'Mochila ADV',
+    'Mochila Adv G',
     'Pasta Sinc',
     'Caixa de Som bluetooth',
     'Térmica JL',
@@ -47,13 +47,11 @@ export default async function Home() {
           }
         </ScontainerImg>
 
-        <Slink href={'http://catalogo.miriammomesso.com.br'}>
+        <Slink rel="noopener noreferrer" target="_blank" href={'http://catalogo.miriammomesso.com.br'}>
           <GoBook />
-          Para ver mais, acesse nosso Catálogo
+          Mais opções acessei nosso catálogo
         </Slink>
-
       </section>
-
     </Shome>
   );
 }

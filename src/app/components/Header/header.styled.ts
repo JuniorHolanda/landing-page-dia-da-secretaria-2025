@@ -63,6 +63,10 @@ export const Swrapper = styled.div`
         font-weight: 800;
 
         @media (max-width: ${({theme}) => theme.breakpoints.desktop  }) {
-            font-size: ${({theme}) => theme.fontSizes.textMedium};
+            font-size: ${({theme}) => theme.fontSizes.textBig};
+        }
+
+        @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
+            font-size: ${({theme}) => theme.fontSizes.textBig};
         }
     `

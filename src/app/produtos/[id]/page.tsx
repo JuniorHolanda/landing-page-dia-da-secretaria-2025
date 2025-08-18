@@ -2,7 +2,6 @@ import { Product } from "@/utils/interface";
 import { Scontent, Sproduct, Swrapper, Slink } from "./productPage.styled";
 import Header from "@/app/components/Header";
 import Gallery from "@/app/components/Gallery";
-import Slider from "@/app/components/Slider";
 
 export default async function ProductPage({
   params,
