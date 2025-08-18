@@ -17,7 +17,9 @@ export const metadata: Metadata = {
   title: "Dia dos Professores",
   description: "Confira nossas sugestões de brindes para o Dia dos Professores",
   // Favicon
-  icons: '/favicon.png',
+  icons: {
+    icon: '/favicon.png',
+  },
 
   // Open Graph (Facebook, LinkedIn, WhatsApp)
   openGraph: {
@@ -59,9 +61,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <head>
-        <link rel="icon" href="/favicon.png" />
-      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProviderWrapper>
           <GlobalStylesProvider />
