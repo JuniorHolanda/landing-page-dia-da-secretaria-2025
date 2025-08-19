@@ -92,7 +92,7 @@ export default async function Home() {
 
         <Slink rel="noopener noreferrer" target="_blank" href={'http://catalogo.miriammomesso.com.br'}>
           <GoBook />
-          Mais opções acessei nosso catálogo
+          Mais opções acesse nosso catálogo
         </Slink>
       </section>
     </Shome>
